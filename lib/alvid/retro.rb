@@ -8,7 +8,7 @@ class Alvid::Retro
   end
 
   def self.list
-    Alvid::Retro.all.map(&:message).join('\n')
+    Alvid::Retro.all.map(&:message).join("\n")
   end
 
   def self.clear
@@ -16,3 +16,4 @@ class Alvid::Retro
   end
 end
 
+DataMapper.auto_upgrade!

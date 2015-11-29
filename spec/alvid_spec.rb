@@ -15,8 +15,18 @@ describe Alvid do
       end
     end
 
+    describe 'when VCAP_SERVICES is empty' do
+      it 'uses provided db' do
+        ENV["VCAP_SERVICES"] = '{  }'
+        expect(DataMapper).to receive(:setup).with(:default, 'sqlite::memory:')
+        Alvid.init
+        ENV.clear
+      end
+    end
+
     describe "when VCAP_SERVICES is not provided" do
       it "uses inmemory db" do
+        ENV.clear
         expect(DataMapper).to receive(:setup).with(:default, 'sqlite::memory:')
         Alvid.init
       end

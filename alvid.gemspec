@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
   s.email         = ["bonzofenix@gmail.com", "dbrockjr@gmail.com"]
 
   s.summary       = %q{Alvid is an advanced AI bot that integrates with slack.}
-  s.description   = %q{TODO: Write a longer description or delete this line.}
-  s.homepage      = "TODO: Put your gem's website or public repo URL here."
+  s.homepage      = "http://bonzofenix.github.io/alvid"
   s.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -32,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rack'
   s.add_development_dependency 'thin', '>= 1.2.0'
   s.add_development_dependency "rspec"
-  s.add_development_dependency "dm-sqlite-adapter"
   s.add_development_dependency "factory_girl"
+  s.add_dependency "dm-sqlite-adapter"
   s.add_dependency "data_mapper"
 end

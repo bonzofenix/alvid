@@ -16,7 +16,7 @@ describe Alvid::Retro do
     end
 
     it 'show all retro items' do
-      expect( Alvid::Retro.list).to eq('banana 1\nbanana 2')
+      expect( Alvid::Retro.list).to eq("banana 1\nbanana 2")
     end
   end
 
