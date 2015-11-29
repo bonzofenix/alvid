@@ -32,5 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rack'
   s.add_development_dependency 'thin', '>= 1.2.0'
   s.add_development_dependency "rspec"
-  s.add_dependency "faye-websocket", "~> 0.9.2"
+  s.add_development_dependency "dm-sqlite-adapter"
+  s.add_development_dependency "factory_girl"
+  s.add_dependency "data_mapper"
 end
