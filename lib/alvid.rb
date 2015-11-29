@@ -7,7 +7,13 @@ module Alvid
                 require 'dm-sqlite-adapter'
                'sqlite::memory:'
              else
-               JSON.parse(ENV['VCAP_SERVICES']).first[1].first.first[1]['uri']
+               product_name, service = JSON.parse(ENV['VCAP_SERVICES']).first
+               case product_name
+             when /mysql/
+               service.first.first[1]['uri']
+             when /cleardb/
+               service.first['credentials']['uri']
+                 end
              end
     DataMapper.setup(:default, db_uri)
   end
