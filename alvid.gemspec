@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.homepage      = "http://bonzofenix.github.io/alvid"
   s.license       = "MIT"
 
-
   s.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|s|features)/}) }
   s.bindir        = "exe"
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
@@ -26,5 +25,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec"
   s.add_development_dependency "factory_girl"
   s.add_dependency "dm-sqlite-adapter"
+  s.add_dependency "dm-mysql-adapter"
   s.add_dependency "data_mapper"
 end
