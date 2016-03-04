@@ -23,8 +23,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rack'
   s.add_development_dependency 'thin', '>= 1.2.0'
   s.add_development_dependency "rspec"
+  s.add_development_dependency "byebug"
   s.add_development_dependency "factory_girl"
   s.add_dependency "dm-sqlite-adapter"
   s.add_dependency "dm-mysql-adapter"
   s.add_dependency "data_mapper"
+  s.add_dependency "octokit"
+  s.add_dependency "sshkey"
 end

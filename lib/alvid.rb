@@ -24,3 +24,4 @@ Alvid.init
 
 require "alvid/version"
 require "alvid/retro"
+require "alvid/github"
