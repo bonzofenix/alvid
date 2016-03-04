@@ -33,7 +33,7 @@ describe Alvid::Github do
     end
 
     it 'should upload public key' do
-      expect_any_instance_of(Octokit::Client).to receive(:add_deploy_key).with(repo_name, "#{repo_name}-dk", keypair.pub )
+      expect_any_instance_of(Octokit::Client).to receive(:add_deploy_key).with("#{organization}/#{repo_name}", "#{repo_name}-dk", keypair.pub )
       github.create_repository(repo_name, organization)
     end
 

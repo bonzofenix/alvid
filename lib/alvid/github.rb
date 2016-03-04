@@ -16,7 +16,7 @@ class Alvid::Github
   def create_repository(repo_name, organization)
     @client.create_repository(repo_name, {:organization=>organization})
     keypair = Alvid::Keypair.new
-    @client.add_deploy_key(repo_name, "#{repo_name}-dk", keypair.pub)
+    @client.add_deploy_key( "#{organization}/#{repo_name}" , "#{repo_name}-dk", keypair.pub)
     keypair.pri
   end
 end
