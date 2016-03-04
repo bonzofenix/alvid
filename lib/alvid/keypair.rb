@@ -7,8 +7,9 @@ module Alvid
     end
 
     def pub
-      @keypair.public_key
+      @keypair.ssh_public_key
     end
+
     def pri
       @keypair.private_key
     end

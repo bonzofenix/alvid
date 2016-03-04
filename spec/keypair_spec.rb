@@ -20,7 +20,7 @@ describe Alvid::Keypair do
 
   describe 'pub' do
     it 'should return public key' do
-      expect_any_instance_of(SSHKey).to receive(:public_key)
+      expect_any_instance_of(SSHKey).to receive(:ssh_public_key)
       keypair.pub
     end
   end
