@@ -5,6 +5,7 @@ describe Alvid do
     expect(Alvid::VERSION).not_to be nil
   end
 
+
   describe 'init' do
     describe 'when VCAP_SERVICES provided' do
       it 'supports p-mysql' do
